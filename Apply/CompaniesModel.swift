@@ -21,6 +21,8 @@ class CompaniesModel: NSObject {
     
     private var filepath: String
     
+    let realm = try! Realm()
+    
     override init() {
 
         // Cite lecture codes
@@ -42,11 +44,11 @@ class CompaniesModel: NSObject {
                 
                 let myStrings = data.components(separatedBy: .newlines)
                 for line in myStrings {
-                    if line.contains("~") {
-                        let attributes = line.split(separator: "~")
-                        let company = Company(name: String(attributes[0]), note: String(attributes[1]), image: String(attributes[2]))
-                        companies.append(company)
-                    }
+//                    if line.contains("~") {
+//                        let attributes = line.split(separator: "~")
+//                        let company = Company(name: String(attributes[0]), note: String(attributes[1]), image: String(attributes[2]))
+//                        companies.append(company)
+//                    }
                     
                     if line.contains("|") {
                         let attributes = line.split(separator: "|")
@@ -64,11 +66,38 @@ class CompaniesModel: NSObject {
         
         super.init()
         
-        let realm = try! Realm()
+        render()
+        
+        
+    }
+    
+    func save() {
+        var dataString = String()
+        
+        for item in archivedCompanies {
+            let desc = item.archivedDescription
+            dataString.append(desc)
+        }
+        
+        do  {
+            try dataString.write(toFile: filepath, atomically: true, encoding: .utf8)
+            
+        } catch {
+            print("could not save to file")
+        }
+        
         try! realm.write {
+            realm.delete(realm.objects(Company.self))
             for item in companies {
                 realm.add(item)
             }
+        }
+    }
+    
+    func render() {
+        let saved_companies = realm.objects(Company.self)
+        for company in saved_companies {
+            companies.append(company)
         }
     }
     
@@ -131,36 +160,37 @@ class CompaniesModel: NSObject {
             currentIndex = current - 1
         }
         
-        archivedCompanies.append(company(at: index) ?? Company(name: "Error", note: "Error Company", image: ""))
+        archivedCompanies.append((company(at: index) ?? Company(name: "Error", note: "Error Company", image: "")).copy())
         companies.remove(at: index)
         
         if numberOfCompanies() == 0 {
             currentIndex = nil
         }
         
+        print(archivedCompanies)
         save()
     }
     
     // Cite: lecture code
-    func save() {
-        var dataString = String()
-        for item in companies {
-            let desc = item.desc
-            dataString.append(desc)
-        }
-        
-        for item in archivedCompanies {
-            let desc = item.archivedDescription
-            dataString.append(desc)
-        }
-        
-        do  {
-            try dataString.write(toFile: filepath, atomically: true, encoding: .utf8)
-            
-        } catch {
-            print("could not save to file")
-        }
-    }
+//    func save() {
+//        var dataString = String()
+//        for item in companies {
+//            let desc = item.desc
+//            dataString.append(desc)
+//        }
+//
+//        for item in archivedCompanies {
+//            let desc = item.archivedDescription
+//            dataString.append(desc)
+//        }
+//
+//        do  {
+//            try dataString.write(toFile: filepath, atomically: true, encoding: .utf8)
+//
+//        } catch {
+//            print("could not save to file")
+//        }
+//    }
     
     
 }

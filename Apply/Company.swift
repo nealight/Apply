@@ -46,6 +46,8 @@ class Company: Object {
         return desc
     }
     
-    
+    public func copy() -> Company {
+        return Company(name: self.getName(), note: self.getNote(), image: self.getImage())
+    }
     
 }
