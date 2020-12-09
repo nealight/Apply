@@ -1,0 +1,48 @@
+
+/* Class = "UIButton"; normalTitle = "Add Company Image"; ObjectID = "281-1D-EvF"; */
+"281-1D-EvF.normalTitle" = "添加公司的Logo";
+
+/* Class = "UITabBarItem"; title = "Applications"; ObjectID = "87H-DO-Fgz"; */
+"87H-DO-Fgz.title" = "申请";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "AIF-TI-Lrb"; */
+"AIF-TI-Lrb.text" = "Title";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "G9I-Z3-sG3"; */
+"G9I-Z3-sG3.title" = "取消";
+
+/* Class = "UITextView"; text = "Notes: "; ObjectID = "Igk-O4-Lmc"; */
+"Igk-O4-Lmc.text" = "有关信息： ";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "JtF-J3-hD1"; */
+"JtF-J3-hD1.text" = "Subtitle";
+
+/* Class = "UINavigationItem"; title = "Archived Applications"; ObjectID = "Mto-2z-cE7"; */
+"Mto-2z-cE7.title" = "存档申请";
+
+/* Class = "UITabBarItem"; title = "Archive"; ObjectID = "N2s-4L-gfk"; */
+"N2s-4L-gfk.title" = "存档";
+
+/* Class = "UINavigationItem"; title = "Current Applications"; ObjectID = "TFJ-aM-XAn"; */
+"TFJ-aM-XAn.title" = "在投申请";
+
+/* Class = "UILabel"; text = "Please fill out some information about the company!"; ObjectID = "TyK-e2-KVI"; */
+"TyK-e2-KVI.text" = " 请填写该公司的信息!";
+
+/* Class = "UITextField"; placeholder = "Company Name"; ObjectID = "UNs-vZ-VHg"; */
+"UNs-vZ-VHg.placeholder" = "公司名称";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "mxd-je-AbY"; */
+"mxd-je-AbY.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Add New Company"; ObjectID = "ofG-aw-nSR"; */
+"ofG-aw-nSR.title" = "添加新公司";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "pJI-w1-af3"; */
+"pJI-w1-af3.title" = "保存";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "q2m-iM-NMa"; */
+"q2m-iM-NMa.text" = "Subtitle";
+
+/* Class = "UINavigationItem"; title = "Edit Company"; ObjectID = "DyD-oA-075"; */
+"DyD-oA-075.title" = "公司名称";
