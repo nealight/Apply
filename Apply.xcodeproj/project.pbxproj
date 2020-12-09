@@ -72,6 +72,7 @@
 		1C379C7B255495BE00FC22F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C4023B9255899F800F32BF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		1C4023BE2558C3AF00F32BF9 /* CompanyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsViewController.swift; sourceTree = "<group>"; };
+		1C697CFC2580A6030068444F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1C7D2C06255871A400484493 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		1C7D2C0A2558721700484493 /* CompaniesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesModel.swift; sourceTree = "<group>"; };
 		1C7D2C0E2558751100484493 /* CurrentApplicationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentApplicationsController.swift; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		1C379C4B255495BD00FC22F7 = {
 			isa = PBXGroup;
 			children = (
+				1C697CFC2580A6030068444F /* README.md */,
 				1C379C56255495BD00FC22F7 /* Apply */,
 				1C379C6D255495BE00FC22F7 /* ApplyTests */,
 				1C379C78255495BE00FC22F7 /* ApplyUITests */,
