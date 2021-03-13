@@ -36,10 +36,10 @@ class Company: Object {
     }
     
     // Cite: lecture code
-    public var desc: String {
-        let desc = "\(name)~\(note)~\(image)\n"
-        return desc
-    }
+//    public var desc: String {
+//        let desc = "\(name)~\(note)~\(image)\n"
+//        return desc
+//    }
     
     public var archivedDescription: String {
         let desc = "\(name)|\(note)|\(image)\n"
